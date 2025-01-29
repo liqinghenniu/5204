@@ -17,7 +17,7 @@ workflows:
       - name: 构建 iOS 应用（可选）
         script: flutter build ios --no-codesign
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - my_project/web
     publishing:
       firebase:
         app_id: "1:1008992196336:web:94c3524abe014e8e215435"
