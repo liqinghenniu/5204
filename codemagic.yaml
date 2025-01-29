@@ -1,18 +1,25 @@
 workflows:
-  default-workflow:
-    name: Default Workflow
+  build_and_deploy:
+    name: Build and Deploy to Firebase
+    max_build_duration: 60
+    instance_type: mac_mini
     environment:
-      vars:
-        NODE_VERSION: "16" # Set Node.js version
+      flutter: stable
+      groups:
+        - firebase_credentials  # 关联 Firebase 密钥
     scripts:
-      - npm install # Install dependencies
-      - npm run build # Build the project
+      - name: 获取 Flutter 依赖
+        script: flutter pub get
+      - name: 运行测试
+        script: flutter test
+      - name: 构建 Android 应用
+        script: flutter build apk --release
+      - name: 构建 iOS 应用（可选）
+        script: flutter build ios --no-codesign
     artifacts:
-      - build/ # Upload built files
+      - build/app/outputs/flutter-apk/app-release.apk
     publishing:
-      email:
-        recipients:
-          - kengyap@upm.edu.my # Add teacher's email for testing
       firebase:
-      app_id: my project
-      groups: testers
+        app_id: "my-project-ecec2"
+        service_account: $FIREBASE_CREDENTIALS
+        groups: testers
