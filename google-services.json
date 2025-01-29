@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "291723302052",
+    "project_id": "swe5204",
+    "storage_bucket": "swe5204.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291723302052:android:540c84e9f69ae909834231",
+        "android_client_info": {
+          "package_name": "dis.ho.this1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs9raDhEPOH1KCJWLf5-kDNVMrKzoeHr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

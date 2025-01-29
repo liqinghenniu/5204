@@ -13,3 +13,6 @@ workflows:
       email:
         recipients:
           - kengyap@upm.edu.my # Add teacher's email for testing
+      firebase:
+      app_id: my project
+      groups: testers
