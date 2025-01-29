@@ -20,6 +20,6 @@ workflows:
       - build/app/outputs/flutter-apk/app-release.apk
     publishing:
       firebase:
-        app_id: "1:1008992196336:android:73a6f064ec839c69215435"
+        app_id: "1:1008992196336:web:94c3524abe014e8e215435"
         service_account: $FIREBASE_CREDENTIALS
         groups: testers
